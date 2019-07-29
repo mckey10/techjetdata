@@ -1,0 +1,85 @@
+<div class="card card-body">
+  <table class= "table table-hover">
+    <thead>
+    <tr>
+      <th>NO</th>
+      <th>DESCRIPTION</th>
+      <th>P/N TJ</th>
+      <th>HOLDER</th>
+      <th>H, mm</th>
+      <th>F, mm/min</th>
+      <th>S, rpm</th>
+      <th>Offset R</th>
+      <th>D</th>
+      <th>TOOL LIFE</th>
+      <th></th>
+
+    </tr>
+    </thead>
+
+
+    <tbody *ngFor="let tool of tools">
+    <tr>
+      <!--String interpolation-->
+      <td>{{tool.toolnumber}}</td>
+      <td>{{tool.description}}</td>
+      <td>{{tool.partnumtj}}</td>
+      <td>{{tool.holder}}</td>
+      <td>{{tool.hight}}</td>
+      <td>{{tool.f}}</td>
+      <td>{{tool.s}}</td>
+      <td>{{tool.offset}}</td>
+      <td>{{tool.d}}</td>
+      <td>{{tool.toollife}}</td>
+
+      <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class = "table table-hover">
+    <thead>
+    <tr>
+      <th>DMS</th>
+      <th>Rev.</th>
+      <th>Coolant</th>
+      <th>Lathe programm</th>
+      <th>Design</th>
+      <th>Approve</th>
+      <th>Date</th>
+      <th>Material</th>
+      <th>Block</th>
+      <th>Operation</th>
+      <th>Fixture</th>
+      <th>Machine</th>
+      <th>Airfoil type</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody *ngFor="let person of persons">
+    <tr>
+      <!--String interpolation-->
+      <td>{{person.dms}}</td>
+      <td>{{person.rev}}</td>
+      <td>{{person.coolant}}</td>
+      <td>{{person.latheProgramm}}</td>
+      <td>{{person.design}}</td>
+      <td>{{person.approve}}</td>
+      <td>{{person.date}}</td>
+      <td>{{person.material}}</td>
+      <td>{{person.block}}</td>
+      <td>{{person.operation}}</td>
+      <td>{{person.fixture}}</td>
+      <td>{{person.machine}}</td>
+      <td>{{person.airfoilType}}</td>
+      <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+
+    </tr>
+    </tbody>
+
+  </table>
+  <div class="card-footer">
+    <button class="btn btn-primary">Save</button>
+  </div>
+</div>
